@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Premium Payment UI</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Smooth animated gradient background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* glow circles */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+}
+
+body::before {
+    width: 500px;
+    height: 500px;
+    background: #a18cd1;
+    top: -150px;
+    left: -150px;
+}
+
+body::after {
+    width: 500px;
+    height: 500px;
+    background: #fbc2eb;
+    bottom: -150px;
+    right: -150px;
+}
+
+/* MAIN BOX - EVEN BIGGER */
+.container {
+    width: 1300px;
+    height: 700px;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(30px);
+
+    box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+    transition: 0.4s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* LEFT */
+.left {
+    width: 60%;
+    padding: 60px;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.tab {
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab:hover {
+    background: #7b5cff;
+    color: white;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: rgba(255,255,255,0.95);
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+/* BUTTON */
+.pay-btn {
+    width: 100%;
+    margin-top: 35px;
+    padding: 18px;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(135deg, #7b5cff, #a18cd1);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(123,92,255,0.6);
+}
+
+.secure {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* RIGHT */
+.right {
+    width: 40%;
+    padding: 60px;
+    background: rgba(255,255,255,0.25);
+}
+
+.right h2 {
+    margin-bottom: 35px;
+    font-size: 26px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.item small {
+    display: block;
+    color: gray;
+}
+
+.total {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="tabs">
+            <div class="tab">💳 Card</div>
+            <div class="tab">🅿 PayPal</div>
+            <div class="tab">₿ Crypto</div>
+            <div class="tab">📱 GPay</div>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="card" placeholder="Card Number">
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Card Holder Name">
+        </div>
+
+        <div class="row">
+            <input type="text" id="date" placeholder="MM/YY">
+            <input type="text" id="cvv" placeholder="CVV">
+        </div>
+
+        <button class="pay-btn" onclick="payNow()">Pay Now $10.99</button>
+
+        <div class="secure">🔒 Secure Payment</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <h2>Summary</h2>
+
+        <div class="item">
+            <div>144Hz gaming monitor <small>Qty: 1</small></div>
+            <div>£1,399.98</div>
+        </div>
+
+        <div class="item">
+            <div>Wireless mouse <small>Qty: 1</small></div>
+            <div>£149.99</div>
+        </div>
+
+        <div class="item">
+            <div>Mechanical keyboard <small>Qty: 1</small></div>
+            <div>£199.99</div>
+        </div>
+
+        <div class="total">
+            <span>Total</span>
+            <span>£1,749.96</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function payNow() {
+    let card = document.getElementById("card").value;
+    let name = document.getElementById("name").value;
+    let date = document.getElementById("date").value;
+    let cvv = document.getElementById("cvv").value;
+
+    if(card === "" || name === "" || date === "" || cvv === "") {
+        alert("⚠️ Please fill all details!");
+        return;
+    }
+
+    if(card.length < 12) {
+        alert("❌ Invalid Card Number");
+        return;
+    }
+
+    alert("✅ Payment Successful!");
+}
+</script>
+
+</body>
+</html>
