@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MemoryCapsule – Store Memories for Your Future Self</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+
+  <!-- Balloon Left large -->
+  <div class="balloon balloon-left">
+    <svg viewBox="0 0 80 110" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="b1" cx="35%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#f9a8c4"/>
+          <stop offset="100%" stop-color="#e8738a"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="40" cy="44" rx="34" ry="40" fill="url(#b1)" opacity=".92"/>
+      <ellipse cx="40" cy="44" rx="18" ry="36" fill="rgba(255,255,255,.18)"/>
+      <rect x="36" y="82" width="8" height="14" rx="4" fill="#d4a0b0"/>
+      <line x1="40" y1="96" x2="35" y2="108" stroke="#d4a0b0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="40" y1="96" x2="45" y2="108" stroke="#d4a0b0" stroke-width="1.5" stroke-linecap="round"/>
+      <ellipse cx="42" cy="108" rx="7" ry="3" fill="#c490a0" opacity=".6"/>
+    </svg>
+  </div>
+
+  <!-- Balloon Left small -->
+  <div class="balloon balloon-left2">
+    <svg viewBox="0 0 60 85" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="b2" cx="35%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#ffd6e0"/>
+          <stop offset="100%" stop-color="#f9a8c4"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="30" cy="32" rx="26" ry="30" fill="url(#b2)" opacity=".9"/>
+      <rect x="27" y="61" width="6" height="10" rx="3" fill="#e0b0c0"/>
+      <line x1="30" y1="71" x2="26" y2="82" stroke="#e0b0c0" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="30" y1="71" x2="34" y2="82" stroke="#e0b0c0" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Balloon Right large -->
+  <div class="balloon balloon-right">
+    <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="b3" cx="35%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#fdd8c0"/>
+          <stop offset="100%" stop-color="#f4a980"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="50" cy="54" rx="42" ry="50" fill="url(#b3)" opacity=".92"/>
+      <ellipse cx="50" cy="54" rx="22" ry="44" fill="rgba(255,255,255,.15)"/>
+      <rect x="45" y="102" width="10" height="16" rx="5" fill="#daa888"/>
+      <line x1="50" y1="118" x2="43" y2="128" stroke="#daa888" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="50" y1="118" x2="57" y2="128" stroke="#daa888" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Balloon Right small -->
+  <div class="balloon balloon-right2">
+    <svg viewBox="0 0 65 90" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="b4" cx="35%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#e8d5f5"/>
+          <stop offset="100%" stop-color="#c9a8e8"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="32" cy="36" rx="28" ry="32" fill="url(#b4)" opacity=".9"/>
+      <rect x="29" y="66" width="7" height="11" rx="3.5" fill="#b898d8"/>
+      <line x1="32" y1="77" x2="27" y2="88" stroke="#b898d8" stroke-width="1.3" stroke-linecap="round"/>
+      <line x1="32" y1="77" x2="37" y2="88" stroke="#b898d8" stroke-width="1.3" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <p class="hero-tag">✦ Time Capsule App</p>
+  <h1>Store memories for your future self</h1>
+  <p class="hero-sub"><span>Lock moments.</span>&nbsp; Unlock emotions.</p>
+
+  <div class="hero-actions">
+    <a href="create-capsule.html" class="btn-capsule">
+      <i class="bi bi-lock-fill me-2"></i>Create Your Capsule
+    </a>
+    <a href="demo.html" class="btn-demo">
+      <i class="bi bi-play-circle me-2"></i>Explore Demo
+    </a>
+  </div>
+
+  <div class="cloud-divider"></div>
+</section>
+
+<!-- ═══════════════════ FEATURE CARDS ═══════════════════ -->
+<section class="features-section">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Lock & Unlock -->
+      <div class="col-md-3 col-6">
+        <a href="lock-unlock.html" class="card-link">
+          <div class="feature-card">
+            <div class="feature-icon-wrap icon-lock mx-auto">
+              <i class="bi bi-lock-fill" style="color:#9b6fd4;"></i>
+            </div>
+            <p class="feature-title">Lock &amp; Unlock</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Media Memories -->
+      <div class="col-md-3 col-6">
+        <div class="feature-card feature-card--active">
+          <div class="feature-icon-wrap icon-media mx-auto">
+            <i class="bi bi-images" style="color:#e8738a;"></i>
+          </div>
+          <p class="feature-title active">Media Memories</p>
+        </div>
+      </div>
+
+      <!-- Group Capsules -->
+      <div class="col-md-3 col-6">
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-group mx-auto">
+            <i class="bi bi-people-fill" style="color:#5fa8d8;"></i>
+          </div>
+          <p class="feature-title">Group Capsules</p>
+        </div>
+      </div>
+
+      <!-- Reminders -->
+      <div class="col-md-3 col-6">
+        <a href="reminders.html" class="card-link">
+          <div class="feature-card">
+            <div class="feature-icon-wrap icon-remind mx-auto">
+              <i class="bi bi-alarm-fill" style="color:#e89850;"></i>
+            </div>
+            <p class="feature-title">Reminders</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+<section class="how-section">
+  <div class="container">
+
+    <h2>How It Works</h2>
+
+    <div class="steps-row">
+
+      <div class="step">
+        <span class="step-num">1.</span>
+        <div class="step-text">
+          <strong>Create a Memory Capsule</strong>
+          Add photos, notes &amp; videos
+        </div>
+      </div>
+
+      <span class="step-arrow"><i class="bi bi-arrow-right"></i></span>
+
+      <div class="step">
+        <span class="step-num">2.</span>
+        <div class="step-text">
+          <strong>Lock it Away</strong>
+          Set a future unlock date
+        </div>
+      </div>
+
+      <span class="step-arrow"><i class="bi bi-arrow-right"></i></span>
+
+      <div class="step">
+        <span class="step-num">3.</span>
+        <div class="step-text">
+          <strong>Unlock when the Time is Right</strong>
+          Relive the moment
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-wrap">
+      <a href="create-capsule.html" class="btn-cta-big">
+        <i class="bi bi-capsule me-2"></i>Start your first memory capsule
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bootstrap JS + jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
